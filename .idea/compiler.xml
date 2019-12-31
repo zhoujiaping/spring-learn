@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="spring.sp-beans.main" target="1.8" />
+      <module name="spring.sp-beans.test" target="1.8" />
+      <module name="spring.sp-core.main" target="1.8" />
+      <module name="spring.sp-core.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

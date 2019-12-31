@@ -1,0 +1,73 @@
+spring-beans
+1 annotation 将注解转成pojo
+2 factory
+    access 通过el表达式访问对象属性、方法
+    annotation bean定义、查找相关注解
+    config 属性文件配置、yaml配置等
+    groovy
+    parsing ?
+    serviceloader SPI提供spring service
+    support 提供各种支持，支持创建bean定义、bean注册器、bean初始化等
+    wiring bean注入
+    xml xml定义bean
+3 propertyeditor 各种属性编辑器
+4 其他
+
+
+
+
+
+
+
+1、该模块核心为BeanFactory
+2、BeanFactory体系结构
+3、ApplicationContext、WebApplicationContext为BeanFactory的子接口
+4、通过修改web.xml，替换ApplicationContext的实现类为GroovyWebApplicationContext,
+实现用groovy代替xml配置
+5、SimpleSpringBeanELResolver可以用来替换jsp的el表达式解析器
+参考http://www.voidcn.com/article/p-rsltqmra-bty.html
+用来让el表达式中可以直接使用springBean，比如有个spring bean名称为mailService，它有个getDefaultReceiver方法，
+那么就可以在jsp的el表达式用直接按${mailService.defaultReceiver}这种方式使用
+6、BeanFactoryLocator 创建 bean工厂 的工厂类
+晕，spring认为beanFactory有好多种，用户选择用哪一种，通过xml进行配置，然后用工厂的工厂创建beanFactory。
+spring5去掉了这种机制。
+7、TypeConverter和ConversionService是用来做类型转换的。
+8、
+BeanDefinition  spring bean定义
+BeanDefinitionBuilder 生成spring bean定义
+BeanDefinitionRegistry spring bean定义的注册器
+BeanDefinitionRegistryPostProcessor spring bean定义的注册器注册完成之后的回调处理
+spring启动时，会创建各种spring bean。为了创建spring bean，需要知道spring bean的定义。
+BeanDefinition可以根据xml生成（XmlBeanDefinitionReader），
+可以根据Groovy生成（GroovyBeanDefinitionReader），也可以通过java代码生成（BeanDefinitionBuilder）。
+生成的BeanDefinition要被spring知道，就需要添加到BeanDefinitionRegistry中。
+spring提供了回调方式，在完成BeanDefinition注册之后，会调用实现了BeanDefinitionRegistryPostProcessor的
+组件的方法。利用这种机制，我们可以动态生成spring bean。
+9、ServiceFactoryBean
+通过SPI机制，为spring提供bean
+10、FactoryBean
+一种特殊的spring bean，它可以生成spring bean。
+11、bean生命周期
+    1,调用Bean的构造函数(或者工厂方法)实例化Bean.
+    2,对Bean的成员变量赋值.
+    3,如果Bean实现了BeanNameAware,调用Bean的setBeanName方法.
+    4,如果Bean实现了BeanFactoryAware,调用Bean的setBeanFactory方法.
+    5,如果Bean实现了ApplicationContextAware,调用Bean的setApplicationContext方法.
+    6,如果容器中配置了BeanPostProcessor,调用BeanPostProcessor的postProcessBeforeInitialization方法(如果有多个BeanPostProcessor,调用每一个BeanPostProcessor的postProcessBeforeInitialization方法).
+    6,如果Bean实现了InitializingBean,调用Bean的afterPropertiesSet方法.
+    7,如果Bean配置了init-method方法,调用init-method配置的Bean方法.
+    8,如果容器中配置了BeanPostProcessor,调用BeanPostProcessor的postProcessAfterInitialization方法.(如果有多个BeanPostProcessor,调用每一个BeanPostProcessor的postProcessAfterInitialization方法).
+    9,Bean处于可以使用的状态.
+    10,Spring容器关闭.
+    11,4,如果Bean实现了DisposableBean,调用Bean的destroy方法.
+    12,如果Bean配置了destroy-method方法,调用destroy-method配置的Bean的方法.
+12、属性编辑
+主要用于根据文本配置创建对象。
+可以从文本类型的值转换得到各种类型的值，包括基本类型、包装类型、URL、Resource、Path等。
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+spring-core:
+1 拷贝了asm
+2 拷贝了cglib
+3 注解处理
+4 类型转换
+5 配置和环境
+6 io（资源、资源加载）
+7 序列化和反序列化
+8 toString风格
+9 多线程
+10 类信息描述、获取、匹配
+11 工具类
+其他 异常、类型解析、常量处理等
+
+asm包：将asm的代码拷贝过来的，这样就不受asm版本影响了。
+cglib：将cglib的代码拷贝过来的，这样就不受cglib版本影响了。
+UsesJava8:相当于文档注释，表明该类需要java8支持。
+TypeUtils：工具类，用于判断两种Type直接的声明关系。
+ExponentialBackOff:可以实现间隔增长的重试策略。
+IdGenerator：id生成器
+Base64Utils:base64工具类，会代理给java8的base64或者apache common codec的base64。
+ClassUtils:class工具类。由于java中类型设计的缺陷，很多时候我们处理类型都需要很多判断，判断原始类型，判断数组。
+    判断代理类型，判断类加载器。用spring的ClassUtils就非常省事了。
+
+println java.beans.Introspector.decapitalize('DemoService')//demoService
+
+ConcurrencyThrottleSupport：控制并发数的工具类
+FileSystemUtils：文件系统工具类，递归删除、递归拷贝
+ReflectionUtils:反射工具类
+ResourceUtils：获取当前包中的资源文件
+ResourceLoader：获取当前包和jar包中的资源文件
+SerializationUtils：基于jdk序列化机制实现的序列化和反序列化
+IdGenerator: id生成器
+    SimpleIdGenerator：自增，uuid格式
+    JdkIdGenerator：jdk的uuid
+    AlternativeJdkIdGenerator：同jdk的uuid，性能更好
+SocketUtils：查找可用的tcp/udp端口，判断端口是否可用
+StopWatch：记录一系列任务执行的时间。一般用于开发环境性能统计。
+StreamUtils：io流工具，注意这个工具类不会关闭流。
+StringUtils：字符串工具类。包括文件路径工具。
+objenesis：不需要无参构造器，可以创建对象（内部实现是通过相关api添加一个无参构造器，反射调用）
+
+
+

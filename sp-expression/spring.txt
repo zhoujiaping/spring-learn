@@ -1,0 +1,10 @@
+spring-expression:
+spring表达式语言。因为spring框架很多xml配置。而xml并不是个编程语言，
+有些配置方式无法（难以）实现，所以spring整了一个spel解决这个问题。
+spring后续版本做出了代码即配置，从相反的角度来解决这个问题。
+既然xml不灵活，那就不要在配置里面写代码，反过来我们在代码里面写配置吧。
+（这时候想起那个被人们遗忘在角落的Groovy）
+
+关于spel的使用  https://blog.csdn.net/ya_1249463314/article/details/68484422
+
+
