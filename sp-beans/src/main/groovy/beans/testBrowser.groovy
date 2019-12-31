@@ -10,7 +10,7 @@ process = cmd.execute()
 println process.err.text
 println process.text
 
-cmd = '''cmd /c start chrome.exe D:/svn-repo/lcpt/20191230(jyd)/01_需求/合同文本20191125/test.html --allow-file-access-from-files'''
+cmd = '''cmd /c start chrome.exe D:/test.html --allow-file-access-from-files'''
 println cmd
 process = cmd.execute()
 println process.err.text

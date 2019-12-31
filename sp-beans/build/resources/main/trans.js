@@ -15,8 +15,6 @@
 *
 * 解决访问本地文件跨域问题：启动chrome的时候添加参数 --allow-file-access-from-files
 *
-* @author 01375156 zhoujiaping
-* 
 */
 let headContent = `
 <meta charset="UTF-8"/>

@@ -10,4 +10,4 @@ prop.setProperty("why",'${what}')
  * 参考
  * https://www.jianshu.com/p/81a67516d7fc
  */
-println helper.replacePlaceholders('diffEciqsCreditApplyReq ${name}! ${what}，${why}',prop)
+println helper.replacePlaceholders('agsadfbsfdg ${name}! ${what}，${why}',prop)

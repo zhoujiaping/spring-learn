@@ -5,5 +5,5 @@ import org.springframework.util.LinkedCaseInsensitiveMap
  */
 def map = new LinkedCaseInsensitiveMap()
 map.put("Hello","kitty")
-println map.get("diffEciqsCreditApplyReq")
+println map.get("asdgadfhgsth")
 println map

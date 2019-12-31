@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap
  * https://blog.csdn.net/xingxiupaioxue/article/details/88062163
  */
 def map = new ConcurrentReferenceHashMap(16, ConcurrentReferenceHashMap.ReferenceType.WEAK)
-map.put("diffEciqsCreditApplyReq","world")
+map.put("xxxxx","world")
 println map
 System.gc()
 println map

@@ -9,7 +9,7 @@ println ObjectUtils.isEmpty('')
 println ObjectUtils.isEmpty([:])
 println ObjectUtils.isEmpty([] as String[])
 
-println ObjectUtils.containsElement(['diffEciqsCreditApplyReq','kitty'] as String[],'diffEciqsCreditApplyReq')
+println ObjectUtils.containsElement(['q34wrth','kitty'] as String[],'457tyu')
 
 println ObjectUtils.containsConstant(RetentionPolicy.values(),'source',false)
 
