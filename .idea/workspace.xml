@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d53e1f4-d5b2-4fae-82f3-3bc5913a5fc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-beans/build/resources/main/trans.js" beforeDir="false" afterPath="$PROJECT_DIR$/sp-beans/build/resources/main/trans.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-beans/src/main/groovy/beans/testBrowser.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-beans/src/main/groovy/beans/testBrowser.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testAutoPopulatingList.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testAutoPopulatingList.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testConcurrentReferenceHashMap.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testConcurrentReferenceHashMap.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testDigestUtils.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testDigestUtils.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testFileCopyUtils.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testFileCopyUtils.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testLinkedCaseInsensitiveMap.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testLinkedCaseInsensitiveMap.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testLinkedMultiValueMap.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testLinkedMultiValueMap.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testObjectUtils.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testObjectUtils.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testPropertyPlaceholderHelper.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/sp-core/src/main/groovy/core/testPropertyPlaceholderHelper.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/diffEciqsCreditApplyReq.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/groovy/diffEciqsCreditApplyResultDto.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/java/EciqsCreditApplyReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp-core/src/main/java/EciqsCreditApplyResultDto.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +44,7 @@
   <component name="ProjectId" id="1VNpcFHsLcz3lleSHoArh8OOpU7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">

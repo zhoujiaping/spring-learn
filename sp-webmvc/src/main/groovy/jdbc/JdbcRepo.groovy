@@ -2,6 +2,7 @@ package jdbc
 
 import org.springframework.beans.DirectFieldAccessor
 import org.springframework.jdbc.core.BeanPropertyRowMapper
+import org.springframework.jdbc.core.RowMapper
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport
 import org.springframework.jdbc.support.GeneratedKeyHolder
@@ -28,7 +29,7 @@ import java.lang.reflect.ParameterizedType
  *
  * spring jdbcTemplate好优秀，为什么我们一定要用mybatis呢
  */
-abstract class JdbcRepo<PK extends Number, T> extends NamedParameterJdbcDaoSupport {
+abstract class JdbcRepo<PK,T> extends NamedParameterJdbcDaoSupport implements BaseDao<PK,T>{
     protected Class<PK> pkClazz
     protected Class<T> modelClazz
     protected String versionColumnName = "version"
@@ -38,6 +39,8 @@ abstract class JdbcRepo<PK extends Number, T> extends NamedParameterJdbcDaoSuppo
     protected String tableName
     protected String pkColumnName
     protected String pkPropName
+
+    protected RowMapper<T> rowMapper
 
     protected Map<String, Field> columnNameToFieldMap = new TreeMap()
 
@@ -56,6 +59,7 @@ abstract class JdbcRepo<PK extends Number, T> extends NamedParameterJdbcDaoSuppo
         ParameterizedType type = this.class.genericSuperclass
         pkClazz = type.actualTypeArguments[0]
         modelClazz = type.actualTypeArguments[1]
+        rowMapper = new BeanPropertyRowMapper(modelClazz)
         ReflectionUtils.doWithFields(modelClazz) {
             if (!Modifier.isStatic(it.modifiers) && it.name != 'metaClass') {
                 def columnName = it.name.replaceAll("(?<Uper>[A-Z])", '_${Uper}').toLowerCase()
