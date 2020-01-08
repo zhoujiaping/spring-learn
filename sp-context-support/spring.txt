@@ -1,0 +1,11 @@
+spring-context-support: 功能补充
+cache：各种缓存实现，缓存管理
+mail：邮件发送
+scheduling：支持quartz的调度
+ui：freemarker、velocity、jasperreports
+
+
+
+
+
+

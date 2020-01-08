@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c06eccd0-1996-40cd-b77f-1532baedefa0" name="Default Changelist" comment="" />
+    <list default="true" id="c06eccd0-1996-40cd-b77f-1532baedefa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/aop/testConcurrencyThrottleInterceptor.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sp-context/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spring.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sp-context/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../sp-context/.gradle/4.9/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sp-context/.gradle/4.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../sp-context/.gradle/4.9/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sp-context/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sp-context/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sp-context/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../sp-context/build.gradle" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +43,27 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HierarchyBrowserManager">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="ProjectId" id="1TlkYCqEPLybRAMVVoZ1xsfuvR3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../sp-context" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -64,7 +94,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Groovy.testMethodInvoker">
+  <component name="RunManager" selected="Groovy.testConcurrencyThrottleInterceptor">
+    <configuration name="ConcurrencyThrottleInterceptorTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ConcurrencyThrottleInterceptorTest.test&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="testConcurrencyThrottleInterceptor" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="sp-aop.main" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/aop/testConcurrencyThrottleInterceptor.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/aop" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testExponentialBackOff" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="sp-core.main" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/core/testExponentialBackOff.groovy" />
@@ -87,28 +148,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testObjenesisHelper" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="sp-core.main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/core/testObjenesisHelper.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/core" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testSpringObjenesis" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="sp-core.main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/core/testSpringObjenesis.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/core" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testStandardEnvironment (1)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="sp-core.main" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/core/testStandardEnvironment.groovy" />
@@ -122,18 +161,18 @@
     </configuration>
     <list>
       <item itemvalue="Groovy.testExponentialBackOff" />
-      <item itemvalue="Groovy.testObjenesisHelper" />
-      <item itemvalue="Groovy.testSpringObjenesis" />
       <item itemvalue="Groovy.testStandardEnvironment (1)" />
       <item itemvalue="Groovy.testMethodInvoker" />
+      <item itemvalue="Groovy.testConcurrencyThrottleInterceptor" />
+      <item itemvalue="Gradle.ConcurrencyThrottleInterceptorTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Groovy.testConcurrencyThrottleInterceptor" />
+        <item itemvalue="Gradle.ConcurrencyThrottleInterceptorTest.test" />
         <item itemvalue="Groovy.testMethodInvoker" />
         <item itemvalue="Groovy.testStandardEnvironment (1)" />
         <item itemvalue="Groovy.testExponentialBackOff" />
-        <item itemvalue="Groovy.testObjenesisHelper" />
-        <item itemvalue="Groovy.testSpringObjenesis" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +188,17 @@
       <updated>1574042114311</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

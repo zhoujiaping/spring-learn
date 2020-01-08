@@ -5,6 +5,23 @@ AopUtils:
 判断一个类是否为spring的代理对象
 https://www.jianshu.com/p/a4a815f42cd2
 
+概念
+PointCut、Advise、Aspect
+Joinpoint、Interceptor、Invocation
+织入
+
+实现
+jdk proxy、cglib
+
+字节码处理
+asm、javassist
+
+应用
+性能监控、异步执行、并发限流、调试日志
+
+
+
+
 
 
 

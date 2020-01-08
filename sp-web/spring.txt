@@ -1,0 +1,68 @@
+spring-web:
+org.springframework.http.client: http客户端
+org.springframework.http.converter: 请求体/响应体的转换
+org.springframework.http.server: 支持异步请求处理（servlet3.0+）
+org.springframework.remoting.caucho: 暴露hessian服务,处理hessian请求
+org.springframework.remoting.caucho: http+java序列化 提供远程方法调用
+
+org.springframework.web.accept: http内容协商策略和策略管理
+https://cloud.tencent.com/developer/article/1497385
+
+HessianClientInterceptor： hessian客户端拦截器，拦截客户端的方法执行，添加额外逻辑
+
+org.springframework.web.context.request.async.WebAsyncTask 异步请求处理。
+对单工方式的http请求没啥用，对双工方式的websocket有用。
+
+
+org.springframework.web.context.ContextLoaderListener： web环境加载spring上下文
+
+org.springframework.web.filter.DelegatingFilterProxy：spring bean代理servlet filter
+
+org.springframework.web.filter.ForwardedHeaderFilter：用于处理有nginx代理时，后端返回302重定向的地址
+https://www.iflym.com/index.php/code/201909070001.html
+
+org.springframework.web.filter.HiddenHttpMethodFilter： 用于支持http协议的DELETE、PUT方法
+
+org.springframework.web.filter.ShallowEtagHeaderFilter： 只能节省带宽，而不能提高服务器性能。
+
+org.springframework.web.filter.CharacterEncodingFilter： 设置request和response的characterEncoding。
+实际上只设置了头信息，并没有更改内容的编码方式。
+
+org.springframework.web.filter.OncePerRequestFilter：
+在servlet2.3中，Filter会经过一切请求，包括服务器内部使用的forward转发请求和<%@ include file=”/login.jsp”%>的情况
+servlet2.4中的Filter默认情况下只过滤外部提交的请求，forward和include这些内部转发都不会被过滤，
+
+spring mvc各种过滤器：https://www.cnblogs.com/lykbk/p/DFGDRGW4W53453.html
+
+org.springframework.web.method.annotation：为controller方法获取参数，处理controller方法的返回值。
+比如方法参数有@PathVariable注解，比如返回值为Map转换为ModelAndView。
+
+org.springframework.web.multipart：复合表单支持
+org.springframework.web.multipart.commons.CommonsMultipartResolver：处理将复合表单参数封装为MultipartFile
+
+
+org.springframework.web.util.ContentCachingRequestWrapper
+org.springframework.web.util.ContentCachingResponseWrapper
+将请求内容缓存到字节数组，这样就可以重复获取请求内容了。
+将响应内容缓存到字节数组，这样就可以获取写出去的内容了。
+这个可以用于前后端加解密。在过滤器层替换Request和Response，将内容缓存，加密/解密替换。
+
+
+
+
+
+
+
+RestTemplate或者AsyncRestTemplate设置编码
+https://www.jianshu.com/p/91c0eaacde0b
+
+
+
+java-core教程
+https://www.logicbig.com/tutorials/core-java-tutorial/http-server/http-server-basic.html
+
+
+
+
+
+

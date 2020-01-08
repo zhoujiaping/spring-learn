@@ -1,4 +1,23 @@
 spring-context:
 
+spring java config 参考 https://www.jianshu.com/p/cf45c68c79fd
+
+org.springframework.instrument.classloading包，基于java5的instrument api，
+实现LTW（load time weave类载入时织入）。
+分两种方式：一 直接基于javaagent  二 web容器提供的classloader的transformer
+参考 https://blog.csdn.net/u014624659/article/details/84741245
+
+jmx：嗯。。。这玩意儿，用来监控应用、管理应用的。tomcat里面就是用这个做管理的。
+简单说就是暴露相关的程序状态。
+
+jndi：嗯。。。这玩意儿，除了配置tomcat的数据源，还有人在用么？不是被淘汰了么。。。
+
+theme：实现一键换肤。。。 https://www.cnblogs.com/oukele/p/9891366.html
+
+scheduleing：任务调度
+
+
+
+
 
 
