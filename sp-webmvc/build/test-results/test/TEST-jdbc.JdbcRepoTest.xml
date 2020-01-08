@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="jdbc.JdbcRepoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-08T08:50:01" hostname="SF1375156" time="0.843">
+  <properties/>
+  <testcase name="testQuery" classname="jdbc.JdbcRepoTest" time="0.843"/>
+  <system-out><![CDATA[[jdbc.Demo(1, 2, john, 2019-11-11 16:53:54.0, null, 1, 2019-11-11 16:53:54.0), jdbc.Demo(2, 1, john, 2019-11-11 10:56:11.0, null, 1, 2019-11-11 10:56:11.0), jdbc.Demo(3, 1, john, 2019-11-11 10:59:36.0, null, 1, 2019-11-11 10:59:36.0), jdbc.Demo(4, 11, john0, 2019-11-11 10:59:59.0, null, 0, 2019-11-11 10:59:59.0), jdbc.Demo(9, 1, john1, 2019-11-11 11:12:38.0, null, 1, 2019-11-11 11:12:38.0), jdbc.Demo(10, 1, john2, 2019-11-11 11:12:38.0, null, 1, 2019-11-11 11:12:38.0), jdbc.Demo(11, 1, zjp, 2020-01-08 13:42:39.0, null, 0, 2020-01-08 13:42:39.0), jdbc.Demo(12, 2, zz, 2020-01-08 13:43:17.0, null, 1, 2020-01-08 13:43:17.0), jdbc.Demo(20, 1, aaa, 2020-01-08 14:40:19.0, null, 1, 2020-01-08 14:40:19.0), jdbc.Demo(21, 1, bbb, 2020-01-08 14:40:19.0, null, 1, 2020-01-08 14:40:19.0), jdbc.Demo(22, 1, o, 2020-01-08 16:00:50.0, null, 1, 2020-01-08 16:00:50.0), jdbc.Demo(23, 1, p, 2020-01-08 16:00:50.0, null, 1, 2020-01-08 16:00:50.0), jdbc.Demo(24, 1, o, 2020-01-08 16:01:47.0, null, 1, 2020-01-08 16:01:47.0), jdbc.Demo(25, 1, p, 2020-01-08 16:01:47.0, null, 1, 2020-01-08 16:01:47.0), jdbc.Demo(26, 1, d1, 2020-01-08 16:13:34.0, null, 1, 2020-01-08 16:13:34.0), jdbc.Demo(27, 4, d3, 2020-01-08 16:13:34.0, null, 1, 2020-01-08 16:13:34.0)]
+]]></system-out>
+  <system-err><![CDATA[一月 08, 2020 4:50:01 下午 org.springframework.jdbc.datasource.SingleConnectionDataSource initConnection
+信息: Established shared JDBC Connection: com.mysql.jdbc.JDBC4Connection@7457a5dd
+]]></system-err>
+</testsuite>

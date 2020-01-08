@@ -1,0 +1,96 @@
+spring-webmvc:
+核心组件
+DispatcherServlet
+HandlerMapping（映射用哪个Handler，Handler可以是一个类，可以是一个方法）
+HandlerAdapter（调用Handler的方法，返回ModelAndView）
+ModelAndView
+ViewResolver
+
+
+
+annotation-driven实际上是配置了RequestMappingHandlerMapping和RequestMappingHandlerAdapter
+
+核心方法
+org.springframework.web.servlet.FrameworkServlet#initServletBean
+
+
+
+spring-tx：关键方法
+org.springframework.transaction.interceptor.TransactionAspectSupport#invokeWithinTransaction
+
+每个事务都绑定到线程。嵌套事务，类似于栈
+org.springframework.transaction.interceptor.TransactionAspectSupport.TransactionInfo
+
+相关概念的类
+Isolation：事务隔离级别
+Propagation：事务冒泡策略
+TransactionInfo：事务信息
+PlatformTransactionManager：事务管理器
+TransactionAttribute：事务属性
+DefaultTransactionStatus：savePoint管理
+TransactionPhase：事务阶段
+
+问题：
+如何实现TxNew？
+savePoint用在什么场景？
+TxNew会新开个事务，会不会新占用一个连接？
+参考：org.springframework.transaction.support.AbstractPlatformTransactionManager#handleExistingTransaction
+spring会判断事务定义的冒泡属性，如果是REQUIRES_NEW,就挂起当前事务（保存当前事务，如果有），
+然后再申请一个数据库连接，开启一个新的事务。
+不能用savePoint实现TxNew，因为有些数据库不支持。比如mysql，begin事务后，要么rollback，要么commit，不允许再次begin。
+savePoint用于实现嵌套事务（PROPAGATION_NESTED）。
+
+介绍spring事务的一篇不错的文章https://blog.csdn.net/paincupid/article/details/48185597
+
+声明式事务方法名匹配规则：最长匹配原则，即
+<tx:method name="update*"  中的name的长度。
+org.springframework.transaction.interceptor.NameMatchTransactionAttributeSource#getTransactionAttribute
+
+常用配置
+事务拦截 execution(* com.xxx..*.*ServiceImpl.*(..))
+<tx:method name="add*" propagation="REQUIRED" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="save*" propagation="REQUIRED" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="create*" propagation="REQUIRED" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="insert*" propagation="REQUIRED" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="update*" propagation="REQUIRED" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="delete*" propagation="REQUIRED" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="*WithTx" propagation="REQUIRED" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="*TxNew" propagation="REQUIRES_NEW" rollback-for="Throwable" isolation="READ_COMMITTED"/>
+<tx:method name="*" propagation="REQUIRED" read-only="true" />
+<!-- 这段被注释掉的配置有问题。当某个xxxServiceImpl的方法为第一个被调用的service方法，
+并且匹配方法名为*（当前上下文无事务，以非事务模式执行），
+并且里面用了mapper.insert或者mapper.update，那么此时read-only失效。
+此时，spring是不管事务的，insert/update使用的是mybatis（如果用的这个）的事务，
+而mybatis以为把事务管理交出去给spring管理了，mybatis也不会管理事务，结果就是以jdbc默认事务执行（自动提交）。
+当service方法异常，前面执行过的insert/update不会被回滚。
+<tx:method name="*" propagation="SUPPORTS" read-only="true" />
+-->
+
+PROPAGATION_REQUIRED -- 支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。
+PROPAGATION_SUPPORTS -- 支持当前事务，如果当前没有事务，就以非事务方式执行。
+PROPAGATION_MANDATORY -- 支持当前事务，如果当前没有事务，就抛出异常。
+PROPAGATION_REQUIRES_NEW -- 新建事务，如果当前存在事务，把当前事务挂起。
+PROPAGATION_NOT_SUPPORTED -- 以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。
+PROPAGATION_NEVER -- 以非事务方式执行，如果当前存在事务，则抛出异常。
+PROPAGATION_NESTED -- 如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则进行与PROPAGATION_REQUIRED类似的操作。
+
+最佳实践
+1、不要轻易使用PROPAGATION_SUPPORTS和PROPAGATION_NOT_SUPPORTED
+2、无事务的组件的方法（比如发送短信，发送邮件），不要命名为xxxServiceImpl，不要被spring事务拦截。
+3、只读事务，必须要让read-only生效。
+4、暂时没想到。。。
+
+
+
+spring-test:
+
+
+
+
+
+
+
+
+
+
+
