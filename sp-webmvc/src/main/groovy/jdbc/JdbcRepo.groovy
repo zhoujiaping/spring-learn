@@ -29,7 +29,7 @@ import java.lang.reflect.ParameterizedType
  *
  * spring jdbcTemplate好优秀，为什么我们一定要用mybatis呢
  */
-abstract class JdbcRepo<PK,T> extends NamedParameterJdbcDaoSupport implements BaseDao<PK,T>{
+abstract class JdbcRepo<PK extends Number,T> extends NamedParameterJdbcDaoSupport implements BaseDao<PK,T>{
     protected Class<PK> pkClazz
     protected Class<T> modelClazz
     protected String versionColumnName = "version"
